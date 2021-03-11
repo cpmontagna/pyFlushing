@@ -1,6 +1,5 @@
 A small python library to simulate flushing of a magma column through equilibrium steps, based on [solwcad](http://www.pi.ingv.it/progetti/eurovolc/) [(Papale et al. 2006)](https://doi.org/10.1016/j.chemgeo.2006.01.013)
 
-* Dependencies
 Needs `numpy`.
 
 * [flushing column](flushingColumn)
