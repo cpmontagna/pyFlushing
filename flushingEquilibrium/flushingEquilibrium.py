@@ -90,7 +90,7 @@ for j in range(0, input_size):
     input_gas = initial_input_gas + delta_input_gas * j
     with open(saveDir + '/' + saveFile + str(input_gas) + '.out','w') as fs:
         fs.write("weight fractions unless otherwise noted\n")
-        fs.write("pressure \t temperature \t input fluid \t water \t CO2 \t dissolved h2o ontot \t dissolved co2 ontot \t exsolved h2o ongas \t exsolved h2o ongas mol \t gas_ontotal\n")
+        fs.write("pressure \t temperature \t water \t CO2 \t dissolved h2o ontot \t dissolved co2 ontot \t exsolved h2o ongas \t exsolved h2o ongas mol \t gas_ontotal\n")
 
     # loop on pressures; volatiles calculated as initial dissolved + input flushing fluid, at 1 wt% steps
     # initial step at largest pressure
@@ -111,7 +111,7 @@ for j in range(0, input_size):
             gas_ontotal = 1
 
         with open(saveDir + '/' + saveFile + str(input_gas) + '.out','a') as fs:
-            fs.write("%f \t %f \t %f \t %f \t % f \t %f \t %f \t %f \t %f \n" % (p, T, ox[0], ox[1], xy[0], xy[1], xy[2], exsolved_h2o_ongas_molar, gas_ontotal))
+            fs.write("%f \t %f \t %f \t %f \t %f \t %f \t %f \t %f \t %f \n" % (p, T, ox[0], ox[1], xy[0], xy[1], xy[2], exsolved_h2o_ongas_molar, gas_ontotal))
 
         ox[0] = previous_dissolved_h2o[i+1] + gas_ontotal * exsolved_h2o_ongas
         ox[1] = previous_dissolved_co2[i+1] + gas_ontotal * xy[3]
