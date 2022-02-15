@@ -1,6 +1,8 @@
 *#*
 *.so
-column*
+column[2-3]*
+timeSeries
+volumes
 equilibrium*
 *~
 *.jpg
