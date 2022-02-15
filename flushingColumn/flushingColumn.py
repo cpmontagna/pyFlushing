@@ -1,4 +1,4 @@
-# simulate flushing of a magma column thorugh equilibrium steps
+# simulate flushing of a magma column through equilibrium steps
 # initial condition: magma column with given total volatile content at equilibrium, with no excess fluids
 # excess fluid phase is injected in discrete batches
 # at every pressure step equilibrium is recalculated, the excess fluid is removed and passed on to the next pressure step, changing the composition of the melt before the next flushing batch is inserted
@@ -49,10 +49,10 @@ oxidesList = [.02, .005, .4741, .0087, .1496, .0164, .0532, .0009, .0394, .1556,
 initial_input_gas = 0.01
 final_input_gas = 10.
 delta_input_gas = 0.01 
-co2_in = 0.49              # composition (weight fraction) of the fluid phase
+co2_in = 0.96              # composition (weight fraction) of the fluid phase
 
 # save results
-saveDir = 'column3'    # directory where to save results
+saveDir = 'column1'    # directory where to save results
 initialCondition = 'initialColumnPy.out' # file name for the initial condition
 saveFile = 'pythonColumn'  # file names for successive flushing batches - total fluid flushed so far is appended
 
@@ -107,7 +107,8 @@ for i in range(0, vector_size):
 for j in range(0, input_size):
     
     input_gas = initial_input_gas + delta_input_gas * j
-    with open(saveDir + '/' + saveFile + str(input_gas) + '.out','w') as fs:
+    with open(saveDir + '/' + saveFile + "{:.2f}".format(input_gas) + '.out','w') as fs:
+    
         fs.write("weight fractions unless otherwise noted\n")
         fs.write("pressure \t temperature \t input fluid \t water \t CO2 \t dissolved h2o ontot \t dissolved co2 ontot \t exsolved h2o ongas \t exsolved h2o ongas mol \t gas_ontotal\n")
 
@@ -129,7 +130,7 @@ for j in range(0, input_size):
         if gas_ontotal > 1:
             gas_ontotal = 1
 
-        with open(saveDir + '/' + saveFile + str(input_gas) + '.out','a') as fs:
+        with open(saveDir + '/' + saveFile + "{:.2f}".format(input_gas) + '.out','a') as fs:
             fs.write("%f \t %f \t %f \t %f \t % f \t %f \t %f \t %f \t %f \n" % (p, T, ox[0], ox[1], xy[0], xy[1], xy[2], exsolved_h2o_ongas_molar, gas_ontotal))
 
         ox[0] = previous_dissolved_h2o[i+1] + gas_ontotal * exsolved_h2o_ongas
