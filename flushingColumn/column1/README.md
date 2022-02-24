@@ -3,7 +3,7 @@
 Magma column at thermodynamic equilibrium with
 **total water at 2 wt%, total CO<sub>2</sub> at 0.5 wt%**, resulting in a
 volatile-saturated magma. Excess fluids are removed.  
-**Silicate melt composition** is taken from Metrich et al., 2010; sample
+**Silicate melt composition** is taken from [Métrich et al., 2010](https://doi.org/10.1093/petrology/egp083), sample
 ST531 4b
 
 | SiO2  | TiO2  | Al2O3 | Fe2O3 | FeO   | MnO   | MgO   | CaO   | Na2O | K2O  |
@@ -27,7 +27,7 @@ and passed on to the next pressure step.
 
 ## Results
 Outputs are matrix text files in [results](pyResults), one file for
-each input batch as indicated in the file name. Files are so oganized:
+each input batch as indicated in the file name. Columns are
 
 | p | T | total water | total CO2 | dissolved water | dissolved CO2 | exsoved water | exsolved water mol | fluid |
 |---|---|-------------|-----------|-----------------|---------------|---------------|--------------------|-------|
