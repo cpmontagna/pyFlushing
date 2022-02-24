@@ -2,7 +2,7 @@
 ## Initial condition
 Magma column at thermodynamic equilibrium with
 **total water at 2 wt%, total CO<sub>2</sub> at 0.5 wt%**, resulting in a
-volatile-saturated magma. Excess fluids are removed.
+volatile-saturated magma. Excess fluids are removed.  
 **Silicate melt composition** is taken from Metrich et al., 2010; sample
 ST531 4b
 
@@ -37,7 +37,7 @@ All data are expressed as weight fractions except where otherwise
 noted. Dissolved quantities are with respect to total melt phase,
 while exsolved quantities are with respect to total fluid phase (water
 and CO2).
-
+  
 ## Credits
-Chiara P Montagna, INGV Pisa, 25/2/2021
+Chiara P Montagna, INGV Pisa  
 chiara.montagna@ingv.it
