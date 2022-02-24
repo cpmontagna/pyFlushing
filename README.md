@@ -1,3 +1,5 @@
+# pyFlushing
+
 A small python library to simulate flushing of a magma column through equilibrium steps, based on [solwcad](http://www.pi.ingv.it/progetti/eurovolc/) [(Papale et al. 2006)](https://doi.org/10.1016/j.chemgeo.2006.01.013).
 Needs `numpy`.
 
@@ -7,5 +9,6 @@ Initial condition is a magma column with given total volatile (water and CO<sub>
 * [flushing equilibrium](flushingEquilibrium)
 Initial condition is a magma column in equilibrium with a fixed-composition fluid phase (isopleth), with no excess fluids. The flushing happens as above.
 
-Chiara P Montagna, INGV Pisa, 25/2/2021
+## Credits
+Chiara P Montagna, INGV Pisa  
 chiara.montagna@ingv.it
