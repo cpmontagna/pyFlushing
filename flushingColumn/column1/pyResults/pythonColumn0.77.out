@@ -1,5 +1,5 @@
 weight fractions unless otherwise noted
-pressure 	 temperature 	 input fluid 	 water 	 CO2 	 dissolved h2o ontot 	 dissolved co2 ontot 	 exsolved h2o ongas 	 exsolved h2o ongas mol 	 gas_ontotal
+pressure 	 temperature 	  	 water 	 CO2 	 dissolved h2o onliq 	 dissolved co2 onliq 	 exsolved h2o ongas 	 exsolved h2o ongas mol 	 gas_onliqal
 400000000.000000 	 1473.000000 	 0.015276 	 0.015301 	  0.015017 	 0.005760 	 0.040861 	 0.094316 	 0.010008 
 390000000.000000 	 1473.000000 	 0.015742 	 0.015083 	  0.015462 	 0.005542 	 0.043385 	 0.099798 	 0.010032 
 380000000.000000 	 1473.000000 	 0.016528 	 0.014844 	  0.016214 	 0.005304 	 0.047361 	 0.108359 	 0.010071 
