@@ -21,7 +21,7 @@ thermodyamic equilibrium calculations are at 10 MPa.
 ## Flushing
 The flushing fluid phase is injected in discrete batches; every batch
 is 1 wt% of fluid with respect to magma. The flushing fluid
-composition is 0.96 mol CO2. At every
+composition is 0.9 mol CO2. At every
 pressure step equilibrium is recalculated, the excess fluid is removed
 and passed on to the next pressure step.
 
