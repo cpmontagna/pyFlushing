@@ -3,6 +3,13 @@
 A small python library to simulate flushing of a magma column through equilibrium steps, based on [solwcad](http://www.pi.ingv.it/progetti/eurovolc/) [(Papale et al. 2006)](https://doi.org/10.1016/j.chemgeo.2006.01.013).
 Needs `numpy`.
 
+First, `solwcad` needs to be wrapped in python. To do so, use
+[`f2py`](https://numpy.org/doc/stable/f2py/):
+
+```
+python -m numpy.f2py -c -m solwcadsub solwcadsub.f
+```
+
 * [flushing column](flushingColumn)
 Initial condition is a magma column with given total volatile (water and CO<sub>2</sub>) content at equilibrium, with no excess fluids. The flushing fluid phase is injected in discrete batches. At every pressure step equilibrium is recalculated, the excess fluid is removed and passed on to the next pressure step, changing the composition of the melt before the next flushing batch is inserted.
 
