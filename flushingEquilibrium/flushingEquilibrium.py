@@ -53,7 +53,7 @@ equilibriumIndex = np.zeros(vector_size)
 # initial condition: magma column in equilibrium with a fluid phase of given composition
 with open(saveDir + '/' + initialCondition,'w') as fs:
     fs.write("weight fractions\n")
-    fs.write("pressure \t dissolved h2o onliq \t dissolved co2 onliq \t exsolved co2 ongas \n")
+    fs.write("pressure \t dissolvedH2Oonliq \t dissolvedCO2onliq \t exsolvedCO2ongas \n")
 
 # load data from file
 eq_p,eq_diss_h2o,eq_diss_co2,eq_exs_co2 = np.loadtxt(inFile, usecols = (0,4,5,7), unpack = True)
@@ -90,7 +90,7 @@ for j in range(0, input_size):
     input_gas = initial_input_gas + delta_input_gas * j
     with open(saveDir + '/' + saveFile + str(input_gas) + '.out','w') as fs:
         fs.write("weight fractions unless otherwise noted\n")
-        fs.write("pressure \t temperature \t water \t CO2 \t dissolved h2o onliq \t dissolved co2 onliq \t exsolved h2o ongas \t exsolved h2o ongas mol \t gas_ontotal\n")
+        fs.write("pressure \t temperature \t water \t CO2 \t dissolvedH2Oonliq \t dissolvedCO2onliq \t exsolvedH2Oongas \t exsolvedH2OongasMol \t gasOntot\n")
 
     # loop on pressures; volatiles calculated as initial dissolved + input flushing fluid, at 1 wt% steps
     # initial step at largest pressure

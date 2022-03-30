@@ -77,7 +77,7 @@ previous_dissolved_co2 = np.zeros(vector_size)
 # initial condition: magma column in equilibrium with initial water and co2, with no excess fluid
 with open(saveDir + '/' + initialCondition,'w') as fs:
     fs.write("weight fractions\n")
-    fs.write("pressure \t temperature \t water \t CO2 \t dissolved h2o onliq \t dissolved co2 onliq \t exsolved h2o ongas \t exsolved h2o ongas mol \t gas_ontotal\n")
+    fs.write("pressure \t temperature \t water \t CO2 \t dissolvedH2Oonliq \t dissolvedCO2onliq \t exsolvedH2Oongas \t exsolvedH2OongasMol \t gasOntot\n")
 
 for i in range(0, vector_size):
     
@@ -110,7 +110,7 @@ for j in range(0, input_size):
     with open(saveDir + '/' + saveFile + "{:.2f}".format(input_gas) + '.out','w') as fs:
     
         fs.write("weight fractions unless otherwise noted\n")
-        fs.write("pressure \t temperature \t water \t CO2 \t dissolved h2o onliq \t dissolved co2 onliq \t exsolved h2o ongas \t exsolved h2o ongas mol \t gas_ontotal\n")
+        fs.write("pressure \t temperature \t water \t CO2 \t dissolvedH2Oonliq \t dissolvedCO2onliq \t exsolvedH2Oongas \t exsolvedH2OongasMol \t gasOntot\n")
 
     # loop on pressures; volatiles calculated as initial dissolved + input flushing fluid, at 1 wt% steps
     # initial step at largest pressure
