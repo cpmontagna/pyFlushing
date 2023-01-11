@@ -41,18 +41,19 @@ delta_pressure = 1.e7
 
 # magma composition: weight fractions of water, CO2 and ten major oxides (SiO2 TiO2 Al2O3 Fe2O3 FeO MnO MgO CaO Na2O K2O)
 # silicate melt composition: sample ST531 4b Metrich et al. 2010
-# initial water at 2 wt%, initial CO2 at 0.5 wt%, volatile-saturated magma
-oxidesList = [.02, .005, .4741, .0087, .1496, .0164, .0532, .0009, .0394, .1556, .022, .016]
+# initial water at 2 wt%, initial CO2 at 2 wt%, volatile-saturated magma
+oxidesList = [.02, .02, .4741, .0087, .1496, .0164, .0532, .0009, .0394, .1556, .022, .016]
 
 # flushing phase
 # injected in the system at steps delta_input_gas, from initial_input_gas to final_input_gas
 initial_input_gas = 0.01
 final_input_gas = 10.
 delta_input_gas = 0.01 
-co2_in = 0.96              # composition (weight fraction) of the fluid phase
-
+co2_in = 0.97              # composition (weight fraction) of the fluid phase
+                           # 0.97 is 0.94 mol
+                           
 # save results
-saveDir = 'column1'    # directory where to save results
+saveDir = 'pyResults'    # directory where to save results
 initialCondition = 'initialColumnPy.out' # file name for the initial condition
 saveFile = 'pythonColumn'  # file names for successive flushing batches - total fluid flushed so far is appended
 
@@ -89,9 +90,6 @@ for i in range(0, vector_size):
 
     gas_ontotal = (ox[0] + ox[1] - xy[0] - xy[1])/(1. - xy[0] - xy[1])
 
-    with open(saveDir + '/' + initialCondition,'a') as fs:
-        fs.write("%f \t %f \t %f \t %f \t % f \t %f \t %f \t %f \t %f \n" % (p, T, ox[0], ox[1], xy[0], xy[1], xy[2], exsolved_h2o_ongas_molar, gas_ontotal))
-
     total_exsolved_h2o = gas_ontotal * exsolved_h2o_ongas
     total_exsolved_co2 = gas_ontotal * (1. - exsolved_h2o_ongas)
 
@@ -100,6 +98,9 @@ for i in range(0, vector_size):
       
     ox[0] = ox[0] - total_exsolved_h2o
     ox[1] = ox[1] - total_exsolved_co2
+
+    with open(saveDir + '/' + initialCondition,'a') as fs:
+        fs.write("%f \t %f \t %f \t %f \t % f \t %f \t %f \t %f \t %f \n" % (p, T, ox[0], ox[1], xy[0], xy[1], xy[2], exsolved_h2o_ongas_molar, gas_ontotal))
 
 # flushing: at each pressure step, the excess fluid phase is added to
 # dissolved volatiles in the next step

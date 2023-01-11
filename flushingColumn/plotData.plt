@@ -1,3 +1,5 @@
+cd '../pyResults'
+
 set ylabel 'pressure (MPa)'
 set yrange [405:0.09] reverse
 
