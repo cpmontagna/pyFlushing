@@ -1,9 +1,13 @@
 *#*
 *.so
-column[1-3]*
+column1
+column2
+column3
 timeSeries
 volumes
 equilibrium*
 *~
 *.jpg
 /flushingColumn/column4/figures/figIsobarsIsopleths/Function.hpp
+pyResults
+figures
