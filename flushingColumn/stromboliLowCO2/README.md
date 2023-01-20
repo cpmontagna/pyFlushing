@@ -1,4 +1,4 @@
-# column4
+# stromboliLowCO2
 ## Initial condition
 Magma column at thermodynamic equilibrium with
 **total water at 2 wt%, total CO<sub>2</sub> at 0.5 wt%**, resulting in a
