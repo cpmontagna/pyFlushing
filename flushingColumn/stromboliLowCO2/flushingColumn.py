@@ -49,7 +49,7 @@ oxidesList = [.02, .005, .4741, .0087, .1496, .0164, .0532, .0009, .0394, .1556,
 initial_input_gas = 0.01
 final_input_gas = 10.
 delta_input_gas = 0.01 
-co2_in = 0.96              # composition (weight fraction) of the fluid phase
+co2_in = 0.97              # composition (weight fraction) of the fluid phase
 
 # save results
 saveDir = 'pyResults'    # directory where to save results

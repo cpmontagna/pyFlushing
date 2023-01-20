@@ -1,8 +1,8 @@
-# column1
+# column4
 ## Initial condition
 Magma column at thermodynamic equilibrium with
 **total water at 2 wt%, total CO<sub>2</sub> at 0.5 wt%**, resulting in a
-volatile-saturated magma. Excess fluids are removed.  
+volatile-saturated magma. Excess fluids are removed.
 **Silicate melt composition** is taken from [Métrich et al., 2010](https://doi.org/10.1093/petrology/egp083), sample
 ST531 4b
 
@@ -21,7 +21,7 @@ thermodyamic equilibrium calculations are at 10 MPa.
 ## Flushing
 The flushing fluid phase is injected in discrete batches; every batch
 is 1 wt% of fluid with respect to magma. The flushing fluid
-composition is 0.9 mol CO2. At every
+composition is 0.94 mol CO2. At every
 pressure step equilibrium is recalculated, the excess fluid is removed
 and passed on to the next pressure step.
 
