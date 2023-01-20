@@ -1,8 +1,8 @@
-# column2percentCO2
+# stromboliHighCO2
 ## Initial condition
 Magma column at thermodynamic equilibrium with
-**total water at 2 wt%, total CO<sub>2</sub> at 2 wt%** [Aiuppa et
-al., 2012](https://linkinghub.elsevier.com/retrieve/pii/S0012821X10002335), resulting in a
+**total water at 2 wt%, total CO<sub>2</sub> at 2 wt%** ([Aiuppa et
+al., 2012](https://linkinghub.elsevier.com/retrieve/pii/S0012821X10002335)), resulting in a
 volatile-saturated magma. Excess fluids are removed.
 **Silicate melt composition** is taken from [Métrich et al., 2010](https://doi.org/10.1093/petrology/egp083), sample
 ST531 4b
