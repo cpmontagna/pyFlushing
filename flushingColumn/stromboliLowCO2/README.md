@@ -36,7 +36,9 @@ each input batch as indicated in the file name. Columns are
 All data are expressed as weight fractions except where otherwise
 noted. Dissolved quantities are with respect to total melt phase,
 while exsolved quantities are with respect to total fluid phase (water
-and CO2).
+and CO<sub>2</sub>).
+Running `solwcad` on the outputs above will provide densities and
+viscosities, contained in folder [solwcad](solwcad).
   
 ## Credits
 Chiara P Montagna, INGV Pisa  
