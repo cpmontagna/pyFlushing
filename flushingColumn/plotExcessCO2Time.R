@@ -1,9 +1,4 @@
 # load pyFlushing results and plot surface data in time
-                                        # to save plots, type:
-                                        # pdf("fileName")
-                                        # before running script, and
-                                        # dev.off()
-                                        # at the end
 
 # Chiara P. Montagna, INGV Pisa, 4/2022
 # chiara.montagna@ingv.it
@@ -13,7 +8,7 @@
 pressures<-c(2.e7,1.e8,2.e8)                                   
 # =====================================================
 
-setwd('/disk/science/my_science/magmaDynamics/chamber/CO2flux/stromboli/solwcadColumn/pyFlushing/flushingColumn/column4/pyResults/')
+setwd('../pyResults/')
 
                                         # load .out files in a list
 columns <- lapply(Sys.glob("*.out"), read.delim, header=FALSE)
