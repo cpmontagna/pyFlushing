@@ -1,5 +1,7 @@
 # pyFlushing
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10176157.svg)](https://doi.org/10.5281/zenodo.10176157)
+
 A python main to simulate CO<sub>2</sub> flushing in a magma column through equilibrium steps, based on [solwcad](http://www.pi.ingv.it/progetti/eurovolc/#SOLWCAD) [(Papale et al. 2006)](https://doi.org/10.1016/j.chemgeo.2006.01.013).
 Needs [`numpy`](https://numpy.org/).
 
