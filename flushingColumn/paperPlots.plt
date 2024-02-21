@@ -41,6 +41,14 @@ set xlabel 'Viscosity, Pa s'
 set key bottom right
 plot 'initialFullColumn.out' u (10**$14):1 w lines lw 2 title 'initial condition', 'fullColumn0.10.out' u (10**$14):1 title 'flushing gas 10 wt%' w lines lw 2, 'fullColumn0.50.out' u (10**$14):1 title 'flushing gas 50 wt%' w lines lw 2, 'fullColumn1.00.out' u (10**$14):1 title 'flushing gas 100 wt%' w lines lw 2, 'fullColumn3.00.out' u (10**$14):1 title 'flushing gas 300 wt%' w lines lw 2, 'fullColumn5.00.out' u (10**$14):1 title 'flushing gas 500 wt%' w lines lw 2, 'fullColumn10.00.out' u (10**$14):1 w lines lw 2 title 'flushing gas 1000 wt%'
 
+set term wxt 8
+unset xrange               
+set xlabel 'Gas volume, %' 
+set ylabel 'Pressure, MPa' 
+set yrange [400:0] reverse 
+set key bottom right
+plot 'initialFullColumn.out' u 10:1 w lines lw 2 title 'initial condition', 'fullColumn0.10.out' u 10:1 title 'flushing gas 10 wt%' w lines lw 2, 'fullColumn0.50.out' u 10:1 title 'flushing gas 50 wt%' w lines lw 2, 'fullColumn1.00.out' u 10:1 title 'flushing gas 100 wt%' w lines lw 2, 'fullColumn3.00.out' u 10:1 title 'flushing gas 300 wt%' w lines lw 2, 'fullColumn5.00.out' u 10:1 title 'flushing gas 500 wt%' w lines lw 2, 'fullColumn10.00.out' u 10:1 w lines lw 2 title 'flushing gas 1000 wt%'
+
 # comparisons
 
 cd '../pyResults'
